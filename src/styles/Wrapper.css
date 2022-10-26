@@ -1,0 +1,117 @@
+.wrapper{
+    flex-grow: 1;
+    overflow: auto;
+    min-height: 2em;
+    background-image: url("../../public//images/bgMain.jpg");
+    background-size: cover  ;
+    background-repeat: no-repeat;
+}
+.loader_wrapper{
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../../public//images/bgMain.jpg");
+    background-size: cover  ;
+    background-repeat: no-repeat;
+}
+.settings_block{
+  margin: 10px 0;
+  margin-left: 10px;
+}
+.resetBtn{
+  cursor: pointer;
+  margin-right: 10px;
+  padding: 5px;
+  border: 1px solid white;
+}
+.type_block{
+    display: flex;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+}
+.type_block label, .filterList label{
+  margin-right: 15px;
+}
+.type_block label:hover, .filterList label:hover{
+  cursor: pointer;
+}
+.settings_block{
+  font-size: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+}
+.radiobtns{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.imagesBlock{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.loader {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .loader:after {
+    content: " ";
+    display: block;
+    border-radius: 50%;
+    width: 0;
+    height: 0;
+    margin: 8px;
+    box-sizing: border-box;
+    border: 32px solid rgb(255, 255, 255);
+    border-color: rgb(255, 255, 255) transparent rgb(255, 255, 255) transparent;
+    animation: loader 1.2s infinite;
+  }
+  @keyframes loader {
+    0% {
+      transform: rotate(0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    50% {
+      transform: rotate(900deg);
+      animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    }
+    100% {
+      transform: rotate(1800deg);
+    }
+  }
+  @media (max-width: 450px) {
+    .settings_block{
+      margin: 5px 0;
+      margin-left: 5px;
+    }
+    .resetBtn{
+      font-size: 14px;
+      margin-right: 5px;
+      padding: 2px;
+    }
+    .type_block label, .filterList label{
+      margin-right: 10px;
+      font-size: 14px;
+    }
+}
+@media (max-width: 280px) {
+  .resetBtn{
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 2px;
+  }
+  .type_block label, .filterList label{
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}

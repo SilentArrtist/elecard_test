@@ -1,0 +1,31 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.App{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    height: 100vh;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+.header, .footer{
+    width: 100%;
+    display: flex;
+    flex-shrink: 0;
+    background-image: url("../../public//images/bg.png");
+    background-size: cover  ;
+    background-repeat: no-repeat;
+}
+
+@media (max-width:800px) {
+    .header_menu{
+      display: none;
+    }
+    .burger{
+      display: flex;
+    }
+}

@@ -1,0 +1,112 @@
+.header{
+    height: 50px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+    --navbar_padding:10px;
+    padding: var(--navbar_padding) 15px;
+}
+.logo{
+    font-size: 25px;
+    cursor: pointer;
+}
+.header_menu{
+    display: flex;
+    align-items: center;
+    list-style-type: none; 
+  }
+.header_menu_item{
+    cursor: pointer;
+    position: relative;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 24px;
+    padding-left: 7px;
+  }
+
+.header_menu_item::after{
+    position: absolute;
+    content: "";
+    height: 2px;
+    bottom: -3px;
+    left: -2px;
+    background-color: #fff;
+    max-width: 100%;
+    width: 0%;
+}
+.header_menu .header_menu_item:hover{
+  color: rgba(255, 255, 255, 1);
+  font-size: 24px;
+}
+.header_menu .header_menu_item:hover::after{
+  transition: cubic-bezier(0.785, 0.135, 0.15, 0.86) .2s all;
+  width: 100%;
+}
+
+.burger{
+    display: none;
+    position: absolute;
+    align-items: center;
+    right: calc(var(--navbar_padding));
+    top: calc(var(--navbar_padding));
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    -webkit-transition: 0.4s;
+    -moz-transition: 0.4s;
+    -o-transition: 0.4s;
+    transition: 0.4s;
+  }
+  .burger span, .burger span:before, .burger span:after{
+    position: absolute;
+    height: 3px;
+    background: rgb(253, 253, 253);
+    transition: .3s;
+    border-radius: 5px;
+  }
+  .burger span:before{
+    content: "";
+    width: 30px;
+    left: -10px;
+    top: -12px;
+    transition: top 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span{
+    top: 50%;
+    width: 20px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .burger span:after{
+    width: 12px;
+    content: '';
+    left: 8px;
+    bottom: -12px;
+    transition: bottom 300ms 300ms, transform 300ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .burger span.active:before{
+    top: 0px;
+    transform: rotate(45deg);
+    transition: top 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  }
+  .burger span.active::after{
+    bottom:0;
+    transform: rotate(-45deg);
+    transition: bottom 300ms, transform 300ms 300ms cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+  .burger span.active{
+    background: rgba(255, 255, 255, 0); 
+  }
+
+.link span{
+    padding-left: 15px;
+}
+
+@media (max-width: 860px) {
+    .page {
+        font-size:20px;
+        padding: 5px;
+        color: white;
+        cursor: pointer;
+    }
+}

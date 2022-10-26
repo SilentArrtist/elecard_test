@@ -1,0 +1,22 @@
+.footer{
+    display: flex;
+    flex-direction: row;
+    height: 40px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: white;
+    justify-content: space-between;
+    align-items: center;
+}
+@media (max-width: 450px) {
+    .footer{
+        padding: 5px 10px;
+        font-size: 15px;
+    }
+}
+@media (max-width: 280px) {
+    .footer{
+        padding: 5px 10px;
+        font-size: 10px;
+    }
+}
