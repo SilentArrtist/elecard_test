@@ -8,6 +8,7 @@ import FilterList from './Types/FilterList';
 import OutputType from './Types/OutputType';
 import Pagination from './UI/Pagination';
 import '../styles/Wrapper.css'
+import data from "../data.json";
 import { getDellImgsArr } from '../utils/delImages';
 const Wrapper = memo(() => {
     const [images,setImages] = useState([]);
@@ -18,9 +19,11 @@ const Wrapper = memo(() => {
     const [page,setPage] = useState(1);
     const [pagesCount,setPagesCount] = useState(0);
     const [fetchImages, isLoading, fetchError] = useFetch(async () => {
+        if(fetchError){console.log(fetchError);return;}
         const response = await ImagesService.getAll();
         const count = response.data.length;
-        let imgs = await response.data;
+        let imgs = data; // let imgs = response.data Если сервер заработает но для Github Pages локально
+        setBackupImages(imgs);
         for (const deltimestamp of getDellImgsArr()) {
             imgs = imgs.filter(img=>img.timestamp!==deltimestamp)
         }
