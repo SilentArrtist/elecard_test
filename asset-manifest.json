@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/elecard_test/static/css/main.6b0cbb11.css",
-    "main.js": "/elecard_test/static/js/main.8de62dcc.js",
+    "main.js": "/elecard_test/static/js/main.b0dbb7f6.js",
     "static/media/bg.png": "/elecard_test/static/media/bg.d4c2357eff9985dd5e70.png",
     "static/media/bgMain.jpg": "/elecard_test/static/media/bgMain.fcd9f5ba68f8f902353a.jpg",
     "index.html": "/elecard_test/index.html",
     "main.6b0cbb11.css.map": "/elecard_test/static/css/main.6b0cbb11.css.map",
-    "main.8de62dcc.js.map": "/elecard_test/static/js/main.8de62dcc.js.map"
+    "main.b0dbb7f6.js.map": "/elecard_test/static/js/main.b0dbb7f6.js.map"
   },
   "entrypoints": [
     "static/css/main.6b0cbb11.css",
-    "static/js/main.8de62dcc.js"
+    "static/js/main.b0dbb7f6.js"
   ]
 }
